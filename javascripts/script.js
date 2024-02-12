@@ -54,6 +54,7 @@ function deleteTask(el){
   const dataArrIndex = taskData.findIndex((item) => item.id === el.parentElement.id);
   el.parentElement.remove();
   taskData.splice(dataArrIndex, 1);
+  localStorage.setItem("data", JSON.stringify(taskData));
 }
 
 function editTask(el){
